@@ -1,4 +1,5 @@
 const getContentType = (ext) => {
+  // determine the contentType to put in header
   let contentType = ''
   switch (ext) {
     case '.css':

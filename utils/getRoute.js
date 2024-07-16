@@ -1,6 +1,7 @@
 const path = require('path')
 
 const getRoute = (contentType, url, dirName) => {
+  // set the route based on the request url and make it dynamic
   let route =
     contentType === 'text/html' && url === '/'
       ? path.join(dirName, 'views', 'index.html')
