@@ -1,6 +1,6 @@
 const fsPromises = require('fs').promises
 
-const serveFile = async (route, contentType, response) => {
+const serveFile = async (route, contentType, response, myEmitter) => {
   try {
     const rawData = await fsPromises.readFile(
       route,
@@ -17,6 +17,7 @@ const serveFile = async (route, contentType, response) => {
   } catch (err) {
     console.error(err)
     response.statusCode = 500
+    myEmitter.emit('log', `${err.name}: ${err.message}`, 'errLog.txt');
     response.end()
   }
 }
