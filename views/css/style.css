@@ -4,15 +4,18 @@ body {
   margin: 0px;
   font-family: 'Poppins';
   user-select: none;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background: #070518;
+  width: 100vw;
+  height: 100vh;
 }
 
 .wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 100vh;
-  background: #070518;
   flex-direction: column;
 }
 
@@ -25,4 +28,13 @@ body {
   color: rgb(141, 141, 141);
   font-size: 15px;
   font-weight: 600;
+}
+
+.ancher {
+  text-decoration: none;
+  color: aliceblue;
+  margin-top: 10px;
+}
+.wrapper2 {
+  align-items: flex-start;
 }
